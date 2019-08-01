@@ -8,6 +8,7 @@ load("@package_bundle//file:packages.bzl", "packages")
     name = "cc" if (not mode) else mode[1:],
     base = "//base" + mode,
     debs = [
+        packages["libc6"],
         packages["libgcc1"],
         packages["libgomp1"],
         packages["libstdc++6"],
